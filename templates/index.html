@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вычисление объемов фигур</title>
+    <link type="text/css" href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet">
+</head>
+
+<body>
+ <h2 style="font-size: 36px; font-family: Times, serif; color: #0000ff">Объемы геометрических тел</h2>
+<p>Раньше для определения объемов геометрических тел традиционно использовались интегралы. Сегодня есть и другие подходы, которые подробно представлены в учебниках нашей корпорации. В одном из вебинаров «Российского учебника» учитель высшей категории Алексей Доронин рассказал о методах определения объема разных геометрических тел с помощью принципа Кавальери и других аксиом.</p>
+ <h2 style="font-size: 36px; font-family: Times, serif; color: #0000ff">Определение объема</h2>
+<div class="text-block">Объем можно определить как функцию V на множестве многогранников, удовлетворяющую следующим аксиомам: V сохраняется при движениях. V удовлетворяет принципу Кавальери. Если внутренности многогранников M и N не пересекаются, то V(M ∪ N) = V(M) + V(N). Объем прямоугольного параллелепипеда V = abc. Принцип Кавальери (итальянского математика, ученика Галилея). Если при пересечении двух тел плоскостями, параллельными одной и той же плоскости, в сечениях этих тел любой из плоскостей получаются фигуры, площади которых относятся как m : n, то объемы данных тел относятся как m : n. В открытом банке заданий ЕГЭ есть много задач для отработки этого способа определения объема.
+</div>
+</body>
+
+<body>
+<form action="/qb" method="post">
+    <h2>Объем куба</h2>
+    <h4>дина ребра куба</h4>
+    <input type="text" name="num_1">
+    <input type="submit">
+    <h4>объем куба равен: {{ans}}</h4>
+</form>
+<form action="/bq" method="post">
+    <h2>Объем параллелепипеда</h2>
+    <h4>площадь основания</h4>
+    <input type="text" name="num_2">
+    <h4>высота</h4>
+    <input type="text" name="num_3">
+    <input type="submit">
+    <h4>объем параллелепипеда равен: {{ans1}}</h4>
+</form>
+<form action="/prizma" method="post">
+    <h2>Объем призмы</h2>
+    <h4>высота</h4>
+    <input type="text" name="num_7">
+    <h4>площадь основания</h4>
+    <input type="text" name="num_8">
+    <input type="submit">
+    <h4>объем призмы равен: {{ans3}}</h4>
+</form>
+<form action="/pyramid" method="post">
+    <h2>Объем пирамиды</h2>
+    <h4>высота</h4>
+    <input type="text" name="num_9">
+    <h4>площадь основания</h4>
+    <input type="text" name="num_10">
+    <h4>точность</h4>
+    <input type="text" name="num_11">
+    <input type="submit">
+    <h4>объем пирамиды: {{ans4}}</h4>
+</form>
+<form action="/cilindr" method="post">
+    <h2>Объем цилиндра</h2>
+    <h4>высота</h4>
+    <input type="text" name="num_12">
+    <h4>радиус</h4>
+    <input type="text" name="num_13">
+    <h4>точность</h4>
+    <input type="text" name="num_14">
+    <input type="submit">
+    <h4>объем пирамиды: {{ans5}}</h4>
+</form>
+</form>
+<form action="/shar" method="post">
+    <h2>Объем шара</h2>
+    <h4>радиус</h4>
+    <input type="text" name="num_15">
+    <h4>точность</h4>
+    <input type="text" name="num_16">
+    <input type="submit">
+    <h4>объем пирамиды: {{ans6}}</h4>
+</form>
+</body>
+</html>
